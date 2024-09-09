@@ -3,13 +3,23 @@
     border-top: 0.125rem solid #e4e4e4;
     height: 90vh;
     display: flex;
+    position: relative;
+    overflow: hidden;
+    /* Garante que o conteúdo não ultrapasse os limites */
 }
 
-#hero>img {
+#hero>.borderImg {
     position: absolute;
     right: 0;
     height: 60%;
     padding-left: 30%;
+}
+
+#hero>.heroImg {
+    position: absolute;
+    right: 0;
+    height: 60%;
+    border-radius: 50px;
 }
 
 #hero p {
@@ -20,55 +30,58 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    margin-top: auto;
-    text-align: center;
-    gap: 1.75rem;
+    justify-content: center;
+    /* Alinha o conteúdo verticalmente */
+    margin-left: 10%;
+    /* Ajusta a posição horizontal */
+    max-width: 50%;
+    /* Limita a largura para não ultrapassar a área desejada */
+}
+
+#hero .content h1 {
+    margin-bottom: 1rem;
+    /* Ajuste o espaçamento entre o título e o parágrafo */
+}
+
+#hero .content p {
+    width: 80%;
+    margin: 0 auto;
+    /* Centraliza o parágrafo */
 }
 
 #hero .content>div {
-    width: fit-content;
-    align-self: center;
-    margin-bottom: 20%;
+    display: flex;
+    /* Usar flexbox para os botões */
+    gap: 1rem;
+    /* Espaço entre os botões */
+    justify-content: center;
+    /* Centraliza os botões horizontalmente */
+    margin-top: 1.5rem;
+    /* Ajusta o espaçamento dos botões em relação ao texto */
 }
 
-@media (width >=1280px) {
+#hero .content img {
+    display: none;
+    /* Esconde a imagem se você não deseja exibi-la no conteúdo */
+}
+
+@media (min-width: 1280px) {
     #hero {
         background: var(--bg-color);
         border-top: none;
-
-        /* Continua abaixo */
-        >span {
-            position: absolute;
-            top: 0;
-        }
-
-        >img {
-            top: 0;
-            height: 82%;
-            padding-left: 55%;
-        }
     }
-}
 
-.content p {
-    width: 80%;
-    align-self: center;
-}
+    #hero>.borderImg {
+        position: absolute;
+        right: 0;
+        height: 60%;
+        padding-left: 30%;
+    }
 
-.content {
-    gap: 2.5rem;
-}
-
-.content>div :first-child {
-    width: 10.625rem;
-}
-
-.content p {
-    width: 80%;
-    align-self: center;
-}
-
-.content p:first-of-type {
-    color: var(--primary-color);
-    font-weight: var(--fw-bold);
+    #hero>.heroImg {
+        position: absolute;
+        right: 0;
+        height: 60%;
+        border-radius: 50px;
+    }
 }
