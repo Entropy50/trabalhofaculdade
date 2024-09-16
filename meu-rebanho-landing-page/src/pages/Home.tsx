@@ -1,6 +1,8 @@
 import "../styles/utility.css";
 import HeroRectangleTwo from "../assets/images/rectangleTwo.svg";
 import HeroCowImage from "../assets/images/heroImg.svg";
+import UserFeedback from "../components/UserFeedback";
+import Footer from "../components/Footer";
 import Card from "../components/Cards";
 import "../styles/hero.css";
 import Button from "../components/Button";
@@ -48,6 +50,22 @@ export default function Home() {
                     />
                 </div>
             </section>
+            <section id="feedback" className="feedback-container">
+                <h2>O que nossos clientes dizem</h2>
+                <div className="feedback-grid">
+                    <UserFeedback
+                        imgSrc="path-to-user1-image.jpg"
+                        name="João da Silva"
+                        feedback="Esse aplicativo revolucionou a forma como gerencio minha fazenda, otimizando todo o processo reprodutivo."
+                    />
+                    <UserFeedback
+                        imgSrc="path-to-user2-image.jpg"
+                        name="Ana Pereira"
+                        feedback="Com o controle nutricional e relatórios detalhados, meu trabalho ficou muito mais fácil e eficiente."
+                    />
+                </div>
+            </section>
+            < Footer/>
         </>
     );
 }
