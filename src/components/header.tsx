@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import Button from "./Button";
-import Logo from "../assets/logoHeader.svg";
-import Menu from "../assets/menu.svg";
+import { useEffect, useState } from "react";
 import Close from "../assets/close.svg";
+import Menu from "../assets/menu.svg";
+import Logo from "../assets/newLogoheader.png";
 import "../styles/header.css";
 import "../styles/hero.css";
 import "../styles/utility.css";
+import Button from "./Button";
 
 export default function Header() {
     const [showMobileMenu, setShowMobileMenu] = useState<boolean>(false);
@@ -73,23 +73,23 @@ export default function Header() {
     return (
         <>
             <div className="fixedHeader">
-                <header className="container py-sm relative">
+                <header className="py-sm relative headerFix">
+                    <img className="logoHeader" src={Logo} alt="Logo Meu Rebanho" width={80} height={80} />
                     <div>
                         <nav className="flex items-center justify-between">
-                            <img src={Logo} alt="Logo Meu Rebanho" width={80} height={80} />
                             <div className="desktop-only">
                                 <ul className="no-bullets flex gap-1">
                                     <li>
                                         <a href="#hero" className={getLinkClass("hero")}>Home</a>
                                     </li>
                                     <li>
-                                        <a href="#highlights" className={getLinkClass("highlights")}>Nossos destaques</a>
+                                        <a href="#cards" className={getLinkClass("cards")}>Nossos serviços</a>
                                     </li>
                                     <li>
-                                        <a href="#testimonials" className={getLinkClass("testimonials")}>Depoimentos</a>
+                                        <a href="#feedback" className={getLinkClass("feedback")}>Depoimentos</a>
                                     </li>
                                     <li>
-                                        <a href="#find-us" className={getLinkClass("find-us")}>Onde nos encontrar</a>
+                                        <a href="#footer" className={getLinkClass("footer")}>Onde nos encontrar</a>
                                     </li>
                                 </ul>
                             </div>
@@ -103,13 +103,13 @@ export default function Header() {
                                                     <a href="#hero" className={getLinkClass("hero")} onClick={(e) => handleMobileMenuLinkClick(e, "#hero")}>Home</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#highlights" className={getLinkClass("highlights")} onClick={(e) => handleMobileMenuLinkClick(e, "#highlights")}>Nossos destaques</a>
+                                                    <a href="#cards" className={getLinkClass("cards")} onClick={(e) => handleMobileMenuLinkClick(e, "#cards")}>Nossos destaques</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#testimonials" className={getLinkClass("testimonials")} onClick={(e) => handleMobileMenuLinkClick(e, "#testimonials")}>Depoimentos</a>
+                                                    <a href="#feedback" className={getLinkClass("feedback")} onClick={(e) => handleMobileMenuLinkClick(e, "#feedback")}>Depoimentos</a>
                                                 </li>
                                                 <li>
-                                                    <a href="#find-us" className={getLinkClass("find-us")} onClick={(e) => handleMobileMenuLinkClick(e, "#find-us")}>Onde nos encontrar</a>
+                                                    <a href="#footer" className={getLinkClass("footer")} onClick={(e) => handleMobileMenuLinkClick(e, "#footer")}>Onde nos encontrar</a>
                                                 </li>
                                                 <li>
                                                     <a href="#login" className="reverse-color" >Login</a>

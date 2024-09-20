@@ -1,10 +1,10 @@
 import React from "react";
-import { FaEnvelope, FaPhone, FaFacebook, FaInstagram, FaTwitter } from "react-icons/fa";
+import { FaEnvelope, FaFacebook, FaInstagram, FaPhone, FaTwitter } from "react-icons/fa";
 import "../styles/footer.css";
 
 const Footer: React.FC = () => {
     return (
-        <footer className="footer">
+        <footer id="footer" className="footer">
             <div className="footer-container">
                 <div className="footer-column">
                     <h3>Contato</h3>
@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; 2024 Seu Aplicativo. Todos os direitos reservados.</p>
+                <p>&copy; 2024 Meu Rebanho. Todos os direitos reservados.</p>
             </div>
         </footer>
     );

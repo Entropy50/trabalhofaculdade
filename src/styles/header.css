@@ -11,7 +11,7 @@
 }
 
 .mobile-menu {
-    display: initial;
+    display: none;
     z-index: 3;
 }
 
@@ -40,11 +40,24 @@
     font-size: var(--fs-lg);
 }
 
+.headerFix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+    z-index: 10;
+    position: fixed;
+    width: 100vw;
+    background-color: white;
+    border-bottom: 1px #f6f6f6 solid;
+}
 
-@media (width >=1280px) {
+
+@media (width <=1280px) {
     header {
         position: relative;
-        z-index: 1;
+        justify-content: end !important;
+        align-items: center !important;
     }
 
     nav>img {
@@ -52,10 +65,19 @@
     }
 
     .mobile-menu {
-        display: none;
+        display: initial;
+        margin-right: 60px;
     }
 
     .mobile-menu-content {
-        display: none;
+        position: absolute;
+        display: flex;
+        top: 0;
+        left: 0;
+        padding-top: 2.25rem;
+        width: 100vw;
+        height: 100vh;
+        background: var(--background-color);
+        position: fixed;
     }
 }

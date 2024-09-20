@@ -1,11 +1,12 @@
 #cards {
-    margin-top: 3rem;
     text-align: center;
+    padding: 70px;
+    padding-top: 0;
 }
 
 #cards h2 {
     margin-bottom: 2rem;
-    color: var(--text-color); /* Cor do título da seção */
+    color: var(--text-color);
 }
 
 .card-container {
@@ -16,13 +17,13 @@
 }
 
 .card {
-    background-color: var(--light-gray); /* Cor de fundo dos cards */
+    background-color: var(--light-gray);
     padding: 2rem;
     border-radius: 0.5rem;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
-    max-width: 400px; /* Largura máxima do card */
-    height: 500px; /* Altura do card */
+    max-width: 400px;
+    height: 500px;
     text-align: left;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -33,23 +34,22 @@
 }
 
 .card h3 {
-    color: var(--text-color); /* Cor do título do card */
+    color: var(--text-color);
     font-size: var(--fs-lg);
     margin-bottom: 1rem;
 }
 
 .card p {
-    color: var(--second-text-color); /* Cor do texto do card */
+    color: var(--second-text-color);
     font-size: var(--fs-sm);
     height: 100%;
-    overflow-y: auto; /* Permite rolagem no texto */
-    max-height: 300px; /* Define o limite de altura para o texto */
+    overflow-y: auto;
 }
 
 .card-icon {
     font-size: 2rem;
     margin-bottom: 1rem;
-    color: var(--primary-color); /* Cor do ícone do card */
+    color: var(--primary-color);
 }
 
 @media (min-width: 768px) {
@@ -58,8 +58,8 @@
     }
 
     .card {
-        max-width: 300px; /* Largura máxima do card em telas médias */
-        height: 400px; /* Altura do card em telas médias */
+        max-width: 300px;
+        height: 400px;
     }
 }
 
@@ -69,7 +69,7 @@
     }
 
     .card {
-        max-width: 600px; /* Largura máxima do card em telas grandes */
-        height: 600px; /* Altura do card em telas grandes */
+        max-width: 600px;
+        height: 600px;
     }
 }
