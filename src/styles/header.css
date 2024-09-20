@@ -23,7 +23,8 @@
     padding-top: 2.25rem;
     width: 100vw;
     height: 100vh;
-    background: var(--bg-color);
+    background: var(--background-color);
+    position: fixed;
 }
 
 .mobile-menu-content ul {
