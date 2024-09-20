@@ -76,5 +76,11 @@
 }
 
 .right-0 {
-    right: 0;
+    right: 4%;
+}
+
+.logoHeader {
+    position: absolute;
+    left: 15%;
+    padding: 10px;
 }
