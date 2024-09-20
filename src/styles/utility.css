@@ -70,3 +70,11 @@
         grid-auto-columns: 1fr;
     }
 }
+
+.absolute {
+    position: absolute;
+}
+
+.right-0 {
+    right: 0;
+}
