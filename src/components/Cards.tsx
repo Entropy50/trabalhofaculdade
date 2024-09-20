@@ -1,6 +1,5 @@
 import React from "react";
-import "../styles/cards.css"; // Certifique-se de ter o CSS para o Card
-import { FcGlobe } from "react-icons/fc";
+import "../styles/cards.css";
 
 interface CardProps {
     Icon?: React.ReactNode;
