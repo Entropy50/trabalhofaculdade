@@ -50,30 +50,30 @@ export default function Header() {
 
     const getLinkClass = (section: string) => (section === activeSection ? "active" : "");
     const handleMobileMenuLinkClick = (event: React.MouseEvent<HTMLAnchorElement, MouseEvent>, sectionId: string) => {
-        event.preventDefault(); 
-        setShowMobileMenu(false);
+    event.preventDefault(); 
+    setShowMobileMenu(false);
+
+    const normalizedSectionId = sectionId.startsWith('#') ? sectionId : `#${sectionId}`;
+
+    const section = document.querySelector(normalizedSectionId) as HTMLElement;
     
-        const normalizedSectionId = sectionId.startsWith('#') ? sectionId : `#${sectionId}`;
-    
-        const section = document.querySelector(normalizedSectionId) as HTMLElement;
-        
-        if (section) {
-            const offsetTop = section.getBoundingClientRect().top + window.scrollY;
-    
-            window.scrollTo({
-                top: offsetTop - 80,
-                behavior: 'smooth',
-            });
-        } else {
-            console.log(`Section with ID ${sectionId} not found`);
-        }
-    };
-    
+    if (section) {
+        const offsetTop = section.getBoundingClientRect().top + window.scrollY;
+
+        window.scrollTo({
+            top: offsetTop - 80,
+            behavior: 'smooth',
+        });
+    } else {
+        console.log(`Section with ID ${sectionId} not found`);
+    }
+};
+
 
     return (
         <>
             <div className="fixedHeader">
-                <header className="container py-sm">
+                <header className="container py-sm relative">
                     <div>
                         <nav className="flex items-center justify-between">
                             <img src={Logo} alt="Logo Meu Rebanho" width={80} height={80} />
@@ -92,13 +92,6 @@ export default function Header() {
                                         <a href="#find-us" className={getLinkClass("find-us")}>Onde nos encontrar</a>
                                     </li>
                                 </ul>
-                            </div>
-
-                            <div className="desktop-only">
-                                <div className="flex items-center" style={{ gap: 10 }}>
-                                    <a className="reverse-color ml-lg" href="#login">Login</a>
-                                    <Button text="Cadastre-se" />
-                                </div>
                             </div>
 
                             <div className="mobile-menu">
@@ -135,6 +128,12 @@ export default function Header() {
                             </div>
                         </nav>
                     </div>
+                    <div className="desktop-only absolute right-0">
+                                <div className="flex items-center" style={{ gap: 10 }}>
+                                    <a className="reverse-color ml-lg" href="#login">Login</a>
+                                    <Button text="Cadastre-se" />
+                                </div>
+                            </div>
                 </header>
             </div>
         </>
