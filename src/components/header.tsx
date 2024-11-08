@@ -89,6 +89,9 @@ export default function Header() {
                                         <a href="#feedback" className={getLinkClass("feedback")}>Depoimentos</a>
                                     </li>
                                     <li>
+                                        <a href="#pricing" className={getLinkClass("pricing")}>Planos e preços</a>
+                                    </li>
+                                    <li>
                                         <a href="#footer" className={getLinkClass("footer")}>Onde nos encontrar</a>
                                     </li>
                                 </ul>
@@ -107,6 +110,9 @@ export default function Header() {
                                                 </li>
                                                 <li>
                                                     <a href="#feedback" className={getLinkClass("feedback")} onClick={(e) => handleMobileMenuLinkClick(e, "#feedback")}>Depoimentos</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#princing" className={getLinkClass("princing")} onClick={(e) => handleMobileMenuLinkClick(e, "#princing")}>Planos e preços</a>
                                                 </li>
                                                 <li>
                                                     <a href="#footer" className={getLinkClass("footer")} onClick={(e) => handleMobileMenuLinkClick(e, "#footer")}>Onde nos encontrar</a>

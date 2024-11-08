@@ -1,3 +1,4 @@
+import Check from "../assets/images/Check.svg"
 import CowboyFemale from "../assets/images/femaleCowboy.jpg";
 import HeroCowImage from "../assets/images/heroImg.svg";
 import CowboyMale from "../assets/images/maleCowbow.jpg";
@@ -6,6 +7,7 @@ import Button from "../components/Button";
 import Card from "../components/Cards";
 import Footer from "../components/Footer";
 import UserFeedback from "../components/UserFeedback";
+import "../styles/pricing.css"
 import "../styles/hero.css";
 import "../styles/utility.css";
 
@@ -14,7 +16,7 @@ export default function Home() {
         <>
             <section id="hero">
                 <span className="desktop-only">
-                    <img src={HeroRectangleTwo} alt="Retangulo um tela inicial" className="borderImg"/>
+                    <img src={HeroRectangleTwo} alt="Retangulo um tela inicial" className="borderImg" />
                 </span>
                 <div className="content">
                     <h1>Gestão reprodutiva completa e eficiente para gado leiteiro</h1>
@@ -26,7 +28,7 @@ export default function Home() {
                         <div style={{ width: 300 }}>
                             <Button text="Cadastre-se" />
                         </div>
-                        <div  style={{ width: 300 }}>
+                        <div style={{ width: 300 }}>
                             <Button text="Veja mais" secondary />
                         </div>
                     </div>
@@ -54,7 +56,7 @@ export default function Home() {
                 <h2>O que nossos clientes dizem</h2>
                 <div className="feedback-grid">
                     <UserFeedback
-                        imgSrc= {CowboyMale}
+                        imgSrc={CowboyMale}
                         name="João da Silva"
                         feedback="Esse aplicativo revolucionou a forma como gerencio minha fazenda, otimizando todo o processo reprodutivo."
                     />
@@ -65,7 +67,57 @@ export default function Home() {
                     />
                 </div>
             </section>
-            < Footer/>
+            <section id="pricing" className="container">
+                <header>
+                    <p className="desktop-only">Planos e preços</p>
+                    <h2>Nossos planos</h2>
+                </header>
+                <section className="even-columns gap-1.5">
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Básico</h3>
+                            <p>Você tem direito a uma prova das comidas DonaFrost.</p>
+                        </span><h2>Grátis</h2><Button text="Pedir agora" secondary key="free" /><span className="hr" /><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Retire na loja</p>
+                        </span><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Apenas 1 por CPF</p>
+                        </span>
+                    </div>
+                    <div className="pricing-card premium">
+                        <span className="bonus"><p>1º MÊS COM DESCONTO</p></span><span className="plan">
+                            <h3>Premium</h3>
+                            <p>Para quem precisa de uma marmita diária, muito saborosa.</p>
+                        </span><span className="price">
+                            <h2>R$ 89,90</h2>
+                            <p>/mês</p>
+                        </span><Button text="Pedir agora" key="premium" /><span className="hr" /><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>2 Entregas</p>
+                        </span><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>5 Refeições por semana</p>
+                        </span><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>2 Sucos por semana</p>
+                        </span>
+                    </div>
+                    <div className="pricing-card">
+                        <span className="plan">
+                            <h3>Básico</h3>
+                            <p>Você tem direito a uma prova das comidas DonaFrost.</p>
+                        </span><h2>Grátis</h2><Button text="Pedir agora" secondary key="free" /><span className="hr" /><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Retire na loja</p>
+                        </span><span className="features">
+                            <img src={Check} alt="ícone check" width={24} height={24} />
+                            <p>Apenas 1 por CPF</p>
+                        </span>
+                    </div>
+                </section>
+            </section>
+            < Footer />
         </>
     );
 }
