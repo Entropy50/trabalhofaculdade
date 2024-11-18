@@ -20,11 +20,11 @@ export default function ContactEmail() {
         setError('');
         setSuccessMessage('');
 
-        fetch("https://us-central1-miotto-mail.cloudfunctions.net/sendEmailNoAuth", {
+        fetch("api", {
             method: "POST",
-            mode: "no-cors",
             headers: {
-                "Content-Type": "application/json",
+                "Authorization": "Bearer ",
+                "Content-Type": "application/json"
             },
             body: JSON.stringify({
                 email: email,
