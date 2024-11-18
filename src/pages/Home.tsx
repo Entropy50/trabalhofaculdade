@@ -5,7 +5,7 @@ import CowboyMale from "../assets/images/maleCowbow.jpg";
 import HeroRectangleTwo from "../assets/images/rectangleTwo.svg";
 import Button from "../components/Button";
 import Card from "../components/Cards";
-import Footer from "../components/Footer";
+import ContactEmail from "../components/contactEmail";
 import UserFeedback from "../components/UserFeedback";
 import "../styles/pricing.css"
 import "../styles/hero.css";
@@ -117,7 +117,7 @@ export default function Home() {
                     </div>
                 </section>
             </section>
-            < Footer />
+            < ContactEmail />
         </>
     );
 }

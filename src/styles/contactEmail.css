@@ -1,0 +1,103 @@
+#contactEmail {
+    display: flex;
+    flex-direction: column;
+    padding-block: 4rem;
+    gap: 2rem;
+    align-items: center;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+
+    :first-child {
+        color: var(--primary-color);
+        font-weight: var(--fw-bold);
+    }
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.containerContactEmail {
+    --max-width: 680px;
+    width: min(var(--max-width), 100% - var(--px-lg) * 2);
+    margin-inline: auto;
+}
+
+.pContent {
+    text-align: center;
+}
+
+.buttonEmail[type="submit"] {
+    background: var(--primary-color);
+    color: var(--light-text-color);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-sm);
+    padding: 15px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    border: solid transparent 0.15rem;
+}
+
+.buttonEmail[type="submit"]:hover {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+
+input,
+textarea {
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    transition: all 0.3s ease;
+}
+
+textarea {
+    resize: none;
+    min-height: 60px;
+    padding: 12px;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--primary-color);
+    outline: none;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.2);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: #888;
+    font-style: italic;
+}
+
+input,
+textarea {
+    background-color: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:disabled,
+textarea:disabled {
+    background-color: #f0f0f0;
+    border-color: #ccc;
+}
+
+input,
+textarea {
+    width: 100%;
+    max-width: 100%;
+}
