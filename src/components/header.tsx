@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Close from "../assets/close.svg";
 import Menu from "../assets/menu.svg";
-import Logo from "../assets/newLogoheader.png";
+import Logo from "../assets/logoDrones.jpeg";
 import "../styles/header.css";
 import "../styles/hero.css";
 import "../styles/utility.css";
@@ -74,7 +74,7 @@ export default function Header() {
         <>
             <div className="fixedHeader">
                 <header className="py-sm relative headerFix">
-                    <img className="logoHeader" src={Logo} alt="Logo Meu Rebanho" width={80} height={80} />
+                    <img className="logoHeader" src={Logo} alt="Logo Meu Rebanho" width={210} height={144} />
                     <div>
                         <nav className="flex items-center justify-between">
                             <div className="desktop-only">

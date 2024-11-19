@@ -14,15 +14,11 @@ import "../styles/utility.css";
 export default function Home() {
     return (
         <>
-            <section id="hero">
-                <span className="desktop-only">
-                    <img src={HeroRectangleTwo} alt="Retangulo um tela inicial" className="borderImg" />
-                </span>
+            <section id="hero">                
                 <div className="content">
-                    <h1>Gestão reprodutiva completa e eficiente para gado leiteiro</h1>
+                    <h1>A tecnologia de drones que transforma sua lavoura.</h1>
                     <p>
-                        Otimize a reprodução e o manejo do seu gado leiteiro com nossa solução completa de controle
-                        reprodutivo. Acompanhe a saúde e a produtividade dos animais de forma prática e eficiente.
+                    Melhore o monitoramento, o mapeamento e a eficiência da sua produção agrícola com nossa solução de aluguel de drones
                     </p>
                     <div>
                         <div style={{ width: 300 }}>
@@ -33,22 +29,22 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-                <img src={HeroCowImage} alt="Imagem no quadrante da direita" className="heroImg" />
+                <img src='https://universo.agrogalaxy.com.br/wp-content/uploads/2022/11/como-utilizar-drone-para-pulverizacao.webp' alt="Imagem no quadrante da direita" className="heroImg" />
             </section>
             <section id="cards" className="container">
                 <h2>Nossos Serviços</h2>
                 <div className="card-container">
                     <Card
-                        title="Monitoramento Reprodutivo"
-                        description="Com o serviço de Monitoramento Reprodutivo, você acompanha de forma precisa e automatizada o ciclo reprodutivo do seu rebanho. Nosso sistema permite registrar e rastrear informações importantes como a identificação de cio, inseminações, partos e histórico reprodutivo de cada animal. Assim, você otimiza o manejo, aumenta as chances de sucesso nas inseminações e garante a saúde do rebanho. Tudo isso, com notificações personalizadas para facilitar a tomada de decisão no momento certo."
+                        title="Monitoramento de Lavouras"
+                        description="Utilize drones equipados com câmeras de alta resolução para monitorar suas plantações em tempo real. Identifique pragas, doenças e falhas de irrigação antes que prejudiquem sua produtividade."
                     />
                     <Card
-                        title="Gestão de Nutrição"
-                        description="A Gestão de Nutrição do seu rebanho fica mais eficiente e simplificada com nosso sistema. Registre e acompanhe a dieta de cada animal, controle a quantidade de ração, suplementos e pastagem, e receba sugestões de ajustes com base nas necessidades nutricionais e produtividade de cada fase. Mantenha seus animais saudáveis, maximizando a produção de leite, reduzindo desperdícios e garantindo uma alimentação balanceada de forma prática e automatizada."
+                        title="Mapeamento e Análise de Solo"
+                        description="Drones com sensores avançados capturam dados detalhados sobre o solo da sua propriedade, ajudando na análise de fertilidade e na tomada de decisões sobre correção de nutrientes."
                     />
                     <Card
-                        title="Relatórios e Análises"
-                        description="Com o Relatórios e Análises, você tem uma visão completa e detalhada do desempenho do seu rebanho. Gere relatórios personalizados sobre produção de leite, saúde, reprodução, nutrição e outros indicadores importantes. Utilize gráficos e análises inteligentes para tomar decisões informadas e melhorar a gestão do seu negócio. Nossa ferramenta transforma dados em insights, facilitando o acompanhamento de metas e ajudando a identificar áreas de melhoria."
+                        title="Pulverização de Precisão"
+                        description="Realize pulverizações de defensivos agrícolas de forma eficiente e com economia. Nossos drones aplicam produtos de forma direcionada, reduzindo desperdícios e impacto ambiental."
                     />
                 </div>
             </section>
@@ -57,13 +53,13 @@ export default function Home() {
                 <div className="feedback-grid">
                     <UserFeedback
                         imgSrc={CowboyMale}
-                        name="João da Silva"
-                        feedback="Esse aplicativo revolucionou a forma como gerencio minha fazenda, otimizando todo o processo reprodutivo."
+                        name="João Pereira"
+                        feedback="Os drones agrícolas transformaram a maneira como monitoro minha lavoura. Com imagens aéreas e relatórios detalhados, consegui identificar pragas e áreas de baixa produtividade muito mais rápido. Isso resultou em uma economia significativa nos custos de defensivos."
                     />
                     <UserFeedback
                         imgSrc={CowboyFemale}
-                        name="Ana Pereira"
-                        feedback="Com o controle nutricional e relatórios detalhados, meu trabalho ficou muito mais fácil e eficiente."
+                        name="Maria Oliveira"
+                        feedback="Alugar drones foi uma solução prática e acessível. Agora tenho dados precisos sobre o estado das minhas plantações, o que me ajuda a planejar melhor a irrigação e otimizar a colheita. A tecnologia é incrível e fácil de usar!"
                     />
                 </div>
             </section>

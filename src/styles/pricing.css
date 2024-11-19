@@ -12,7 +12,7 @@ header {
     align-items: center;
 
     :first-child {
-        color: var(--primary-color);
+        color: #584e50;
         font-weight: var(--fw-bold);
     }
 }
@@ -47,11 +47,11 @@ header {
 }
 
 .premium {
-    border: solid 0.2rem var(--primary-color);
+    border: solid 0.2rem #737373;
     padding: 0rem 1.5rem 3rem 1.5rem;
 
     .plan>h3 {
-        color: var(--primary-color);
+        color: #737373;
     }
 }
 
@@ -59,7 +59,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--primary-color);
+    background-color: #737373;
     width: 65%;
     height: 2.5rem;
     align-self: center;

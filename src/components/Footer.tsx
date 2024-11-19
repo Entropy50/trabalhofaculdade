@@ -31,7 +31,7 @@ const Footer: React.FC = () => {
                 </div>
             </div>
             <div className="footer-bottom">
-                <p>&copy; 2024 Meu Rebanho. Todos os direitos reservados.</p>
+                <p>&copy; 2024 Drones. Todos os direitos reservados.</p>
             </div>
         </footer>
     );

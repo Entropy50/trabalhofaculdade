@@ -37,7 +37,7 @@ form {
 }
 
 .buttonEmail[type="submit"] {
-    background: var(--primary-color);
+    background: #737373;
     color: var(--light-text-color);
     font-weight: var(--fw-bold);
     font-size: var(--fs-sm);
@@ -49,8 +49,8 @@ form {
 
 .buttonEmail[type="submit"]:hover {
     background: transparent;
-    color: var(--primary-color);
-    border-color: var(--primary-color);
+    color: #737373;
+    border-color: #737373;
 }
 
 input,

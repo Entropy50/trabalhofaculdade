@@ -23,7 +23,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 400px;
-    height: 500px;
+    height: 400px;
     text-align: left;
     overflow: hidden;
     transition: transform 0.3s ease;
@@ -70,6 +70,6 @@
 
     .card {
         max-width: 600px;
-        height: 600px;
+        height: 400px;
     }
 }
