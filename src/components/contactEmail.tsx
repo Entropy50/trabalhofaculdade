@@ -20,26 +20,26 @@ export default function ContactEmail() {
         setError('');
         setSuccessMessage('');
 
-        fetch("api", {
-            method: "POST",
+        fetch('/api', {
+            method: 'POST',
             headers: {
-                "Authorization": "Bearer ",
-                "Content-Type": "application/json"
+              'Content-Type': 'application/json',
+              'Authorization': 'Bearer eyJhbGciOiJSUzI1NiIsImtpZCI6IjFkYzBmMTcyZThkNmVmMzgyZDZkM2EyMzFmNmMxOTdkZDY4Y2U1ZWYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJodHRwczovL2FjY291bnRzLmdvb2dsZS5jb20iLCJhenAiOiIzMjU1NTk0MDU1OS5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsImF1ZCI6IjMyNTU1OTQwNTU5LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTAwODA5ODY3OTc0NzM5ODE0NjAwIiwiZW1haWwiOiJ3ZWxsaW5ndG9ucmFmYWVsX0Bob3RtYWlsLmNvbSIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJhdF9oYXNoIjoiakQ1ektvVm5ZRzRYcDlFWGFMSk10USIsImlhdCI6MTczMTk3NTExMSwiZXhwIjoxNzMxOTc4NzExfQ.xRGr-336wnjGkkLhsXncPFKa4jMzN5oisl-GIHSTazB9tJBwJYZCdQDv1jPU37yeWbYHJYw7dwiOqHrwd1llH2l6iWt7-ghKyN72dAIlkWcXBOgzu71iw7X-rkVI9M6n4iN_4B8HwCjEmaAxaZrZCk0Ou6k3qXUt6VCUGbHizO76bVlCLL9TwU_bZs88jCUEN0I6CPWfT7HjLGY16JPWeFcDHXKyRP2ofX-i81wMUNMkQHP-M45WvviOeJhvfMi6Fn8Op5VATiCeu2TLR6FbkumBs5Jpzfh8e5iWCgRtJaPVpgIvwq__NnwW79Qu1dZP41jfpKoCcWYF6sgiVze2ag'
             },
             body: JSON.stringify({
-                email: email,
-                conteudo: message,
+              toMail: (email),
+              content: (message),
             }),
+          })
+          .then(() => {
+            setStatus("success");
+            setEmail("");
+            setMessage("");
         })
-            .then(() => {
-                setStatus("success");
-                setEmail("");
-                setMessage("");
-            })
-            .catch(error => {
-                console.error("Erro:", error);
-                setStatus("error");
-            });
+        .catch(error => {
+            console.error("Erro:", error);
+            setStatus("error");
+        });          
     };
 
     const validateEmail = (email: string) => {

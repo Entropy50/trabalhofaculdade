@@ -6,7 +6,7 @@ export default defineConfig({
   server: {
     proxy: {
       '/api': {
-        target: 'https://us-central1-miotto-mail.cloudfunctions.net/sendEmailWithAuth-1',
+        target: 'https://us-central1-maximal-quanta-442118-t0.cloudfunctions.net/function-1',
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, '')
       }
